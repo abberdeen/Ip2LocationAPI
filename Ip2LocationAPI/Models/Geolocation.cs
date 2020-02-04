@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Ip2LocationAPI.Models
 {
-    public class GeoLocation
+    public class Geolocation
     {
         [JsonIgnore]
         public int GeonameId { get; internal set; }
