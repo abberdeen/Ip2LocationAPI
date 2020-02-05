@@ -1,36 +1,39 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text.Json.Serialization;
 using System.Threading.Tasks;
 
 namespace Ip2LocationAPI.Models
 {
-    public class Address
+  public class Address
     {
+
         [JsonIgnore]
+        [Column("geoname_id"), Key]
         public int GeonameId { get; internal set; }
 
-         [JsonPropertyName("continent_name")]
+        [Column("continent_name")]
         public  string ContinentName { get; internal set; }
 
-        [JsonPropertyName("country_iso_code")]
+        [Column("country_iso_code")]
         public string CountryCode { get; internal set; }
 
-        [JsonPropertyName("country_name")]
+        [Column("country_name")]
         public  string CountryName { get; internal set; }
 
-        [JsonPropertyName("subdivision_1_name")]
+        [Column("subdivision_1_name")]
         public string District{ get; internal set; }
 
-        [JsonPropertyName("subdivision_2_name")]
+        [Column("subdivision_2_name")]
         public string Region { get; internal set; }
 
-        [JsonPropertyName("city_name")]
+        [Column("city_name")]
         public string CityName { get; internal set; }
-
-        [JsonPropertyName("postal_code")]
-        public string PostCode { get; internal set; }
-
+        
+        [NotMapped]
+        public Geolocation Geolocation { get; set; }
     }
 }
