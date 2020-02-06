@@ -3,7 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29613.14
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ip2LocationAPI", "Ip2LocationAPI\Ip2LocationAPI.csproj", "{F583CD4C-00E0-4637-B5E9-469F3FBEA930}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Ip2LocationAPI", "Ip2LocationAPI\Ip2LocationAPI.csproj", "{F583CD4C-00E0-4637-B5E9-469F3FBEA930}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ip2LocationUpdater", "Ip2LocationUpdater\Ip2LocationUpdater.csproj", "{02E69FBE-64FB-4900-B895-71A2E87F2C75}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ip2LocationModels", "Ip2LocationModels\Ip2LocationModels.csproj", "{AEFA23BC-DBF6-4FDE-BFBA-E1331DBDCC10}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +19,14 @@ Global
 		{F583CD4C-00E0-4637-B5E9-469F3FBEA930}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F583CD4C-00E0-4637-B5E9-469F3FBEA930}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F583CD4C-00E0-4637-B5E9-469F3FBEA930}.Release|Any CPU.Build.0 = Release|Any CPU
+		{02E69FBE-64FB-4900-B895-71A2E87F2C75}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{02E69FBE-64FB-4900-B895-71A2E87F2C75}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{02E69FBE-64FB-4900-B895-71A2E87F2C75}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{02E69FBE-64FB-4900-B895-71A2E87F2C75}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AEFA23BC-DBF6-4FDE-BFBA-E1331DBDCC10}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AEFA23BC-DBF6-4FDE-BFBA-E1331DBDCC10}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AEFA23BC-DBF6-4FDE-BFBA-E1331DBDCC10}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AEFA23BC-DBF6-4FDE-BFBA-E1331DBDCC10}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

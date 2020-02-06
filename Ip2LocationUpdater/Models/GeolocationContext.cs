@@ -1,27 +1,24 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using Ip2LocationAPI.Models;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Net;
 using System.Threading.Tasks;
 
-namespace Ip2LocationAPI.Models
+namespace Ip2LocationUpdate.Models
 {
     public class GeolocationContext : DbContext
     {
-        public GeolocationContext(DbContextOptions<GeolocationContext> options) : base(options)
+      
+
+        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
+            optionsBuilder.UseNpgsql(@"Host=localhost;Database=Hybrid;Username=postgres;Password=1;");
         }
-         protected override void OnModelCreating(ModelBuilder modelBuilder)
-         {
-           
-         } 
 
         public DbSet<Geolocation> Geolocations { get; set; }
         public DbSet<Address> Addresses { get; set; } 
-
-     
     }
         
 }

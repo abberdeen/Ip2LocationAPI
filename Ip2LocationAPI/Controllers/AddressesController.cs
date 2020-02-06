@@ -36,19 +36,18 @@ namespace Ip2LocationAPI.Controllers
             IPAddress.TryParse(data.Ip, out ipAddress);
             if (ipAddress == null)
             {
-                BadRequest();
+                return BadRequest();
             }
-
-            var geolocation = _context.Geolocations.Where(b => EF.Functions.Contains(b.Network, ipAddress)).First();
+            var geolocation = _context.Geolocations.Where(b => EF.Functions.Contains( b.Network  , ipAddress)).FirstOrDefault();
             if (geolocation == null)
             {
-                NotFound();
+                return NotFound();
             }
 
             var address = _context.Addresses.Find(geolocation.GeonameId);
             if (address == null)
             {
-                NotFound();
+                return NotFound();
             }
 
             address.Geolocation = geolocation;

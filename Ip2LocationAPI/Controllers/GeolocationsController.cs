@@ -23,7 +23,7 @@ namespace Ip2LocationAPI.Controllers
 
         // GET: api/Geolocations
         [HttpGet]
-        public ActionResult<String> GetGeolocations()
+        public ActionResult<string> GetGeolocations()
         {
             return "Use POST method";
         }
@@ -36,12 +36,12 @@ namespace Ip2LocationAPI.Controllers
             IPAddress.TryParse(data.Ip, out ipAddress);
             if (ipAddress == null)
             {
-                BadRequest(  );
-            } 
+                return BadRequest(  );
+            }
             var geolocation = _context.Geolocations.Where(b => EF.Functions.Contains(b.Network,ipAddress)).First();
             if (geolocation == null)
             {
-                NotFound();
+                return NotFound();
             }
 
             return geolocation;
