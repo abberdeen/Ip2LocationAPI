@@ -23,13 +23,12 @@ POST /api/geolocations
 Пример POST запроса:
 ```
 {
-  "ip": "12.3.4.5"
+  "ip": "1.2.3.4"
 }
-```
 ```
 Пример ответа:
 ```
-{"postCode":"600001","latitude":13.086,"longitude":80.2751,"accuracyRadius":500}
+{"postCode":"129128","latitude":55.7527,"longitude":37.6172,"accuracyRadius":1000}
 ```
 ## Ip2LocationUpdater
 Обновляет базу данных регулярно, используя данные поставщика MaxMind GeoLite2 
